@@ -3,9 +3,12 @@ import {
 	Card,
 	Button,
 	Select,
+	Checkbox,
+	TextStyle,
 } from '@shopify/polaris';
 
 import CarrierServicesList from '../CarrierServicesList';
+import SlugIcon from '../SlugIcon';
 import styles from './EnabledCarrierServices.module.scss';
 
 // 快递公司类型
@@ -13,6 +16,7 @@ export interface Carrier {
 	slug: string;
 	name: string;
 	services: CarrierService[];
+	labelDisplayOptions: LabelDisplayOption[];
 }
 
 // 快递服务类型
@@ -58,6 +62,7 @@ const EnabledCarrierServices: React.FC<EnabledCarrierServicesProps> = ({
 	const [labelDisplayOptions, setLabelDisplayOptions] = useState<LabelDisplayOption[]>(
 		initialLabelDisplayOptions
 	);
+	const [expandedCarriers, setExpandedCarriers] = useState<Record<string, boolean>>({});
 
 	// 处理编辑按钮点击
 	const handleEditClick = () => {
@@ -101,18 +106,42 @@ const EnabledCarrierServices: React.FC<EnabledCarrierServicesProps> = ({
 		const newCarriers = [...carriers];
 		newCarriers[carrierIndex].services[serviceIndex].enabled =
 			!newCarriers[carrierIndex].services[serviceIndex].enabled;
+		console.log(newCarriers)
 		setCarriers(newCarriers);
 	};
 
 	// 处理标签显示选项选择
-	const handleLabelOptionToggle = (optionIndex: number) => {
-		const newOptions = [...labelDisplayOptions];
-		newOptions[optionIndex].enabled = !newOptions[optionIndex].enabled;
-		setLabelDisplayOptions(newOptions);
+	const handleLabelOptionToggle = (carrierIndex: number, serviceIndex: number) => {
+
+		console.log(carrierIndex, serviceIndex)
+		const newCarriers = [...carriers];
+		newCarriers[carrierIndex].labelDisplayOptions[serviceIndex].enabled =
+			!newCarriers[carrierIndex].labelDisplayOptions[serviceIndex].enabled;
+		console.log(newCarriers)
+		setCarriers(newCarriers);
 	};
+
+	// 处理快递公司展开/折叠
+	const toggleCarrierExpand = (slug: string) => {
+		setExpandedCarriers(prev => ({
+			...prev,
+			[slug]: !prev[slug],
+		}));
+	};
+
+	// 计算已启用的快递公司数量
+	const enabledCarriersCount = carriers.filter(carrier =>
+		carrier.services.some(service => service.enabled)
+	).length;
 
 	// 展示状态下的内容
 	const renderViewMode = () => {
+		// 获取已启用的快递公司
+		const enabledCarriers = carriers.filter(carrier => carrier.services.some(service => service.enabled));
+
+		// 获取已启用的标签选项
+		const enabledLabelOptions = carriers.filter(carrier => carrier.labelDisplayOptions.some(labelDisplayOption => labelDisplayOption.enabled));
+
 		return (
 			<>
 				<Card.Section>
@@ -124,16 +153,46 @@ const EnabledCarrierServices: React.FC<EnabledCarrierServicesProps> = ({
 					</div>
 				</Card.Section>
 
-				<Card.Section>
-					<CarrierServicesList
-						carriers={carriers.filter(carrier => carrier.services.some(service => service.enabled))}
-						labelDisplayOptions={labelDisplayOptions}
-						onCarrierToggle={handleCarrierToggle}
-						onServiceToggle={handleServiceToggle}
-						onLabelOptionToggle={handleLabelOptionToggle}
-						isEditing={false}
-					/>
-				</Card.Section>
+				{/* 显示已启用的快递公司 */}
+				{enabledCarriers.map(carrier => {
+					const enabledServicesCount = carrier.services.filter(service => service.enabled).length;
+					const labelDisplayOptionsCount = carrier.labelDisplayOptions.filter(labelDisplayOption => labelDisplayOption.enabled);
+					return (
+						<Card.Section key={carrier.slug}>
+							<div className={styles.carrierRow}>
+								<div className={styles.carrierInfo}>
+									<div className={styles.carrierIcon}>
+										<SlugIcon name={carrier.slug} size="40px" />
+									</div>
+									<div className={styles.carrierDetails}>
+										<div className={styles.carrierName}>{carrier.name}</div>
+										<div className={styles.servicesCount}>{enabledServicesCount} Services</div>
+									</div>
+								</div>
+							</div>
+							{labelDisplayOptionsCount?.length > 0 && (
+								<div className={styles.noBorderSection}>
+										<div className={styles.labelOptionsView}>
+											<div className={styles.labelOptionsTitle}>Return label display options:</div>
+											<div className={styles.labelOptionsList}>
+												{labelDisplayOptionsCount.map(option => (
+													<div key={option.id} className={styles.labelOptionItem}>
+														<Checkbox
+															label={`${option.name} ${option.supportedCountries ? `(Supports ${option.supportedCountries.join(', ')})` : ''}`}
+															checked={true}
+															disabled={true}
+														/>
+													</div>
+												))}
+											</div>
+										</div>
+								</div>
+							)}
+						</Card.Section>
+					);
+				})}
+
+
 			</>
 		);
 	};
@@ -145,30 +204,32 @@ const EnabledCarrierServices: React.FC<EnabledCarrierServicesProps> = ({
 				<Card.Section>
 					<div className={styles.header}>
 						<div className={styles.title}>Enabled carrier:</div>
+						<Button plain disabled>
+							Manage
+						</Button>
 					</div>
 				</Card.Section>
 
-				{regionOptions && onRegionChange && (
-					<Card.Section>
-						<div className={styles.regionSelector}>
-							<div className={styles.regionLabel}>Select a region</div>
-							<div className={styles.regionSelect}>
-								<Select
-									label=""
-									labelHidden
-									options={regionOptions}
-									value={selectedRegion}
-									onChange={onRegionChange}
-								/>
-							</div>
-						</div>
-					</Card.Section>
-				)}
-
 				<Card.Section>
+					<div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
+						<div className={styles.selectCarrierText}>Select a carrier and service</div>
+						{regionOptions && onRegionChange && (
+							<div className={styles.regionSelector}>
+								<div className={styles.regionSelect}>
+									<Select
+										label=""
+										labelHidden
+										options={regionOptions}
+										value={selectedRegion}
+										onChange={onRegionChange}
+									/>
+								</div>
+							</div>
+						)}
+					</div>
+
 					<CarrierServicesList
 						carriers={carriers}
-						labelDisplayOptions={labelDisplayOptions}
 						onCarrierToggle={handleCarrierToggle}
 						onServiceToggle={handleServiceToggle}
 						onLabelOptionToggle={handleLabelOptionToggle}

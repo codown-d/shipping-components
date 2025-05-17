@@ -5,10 +5,12 @@
 }
 
 .carrierHeader {
-  padding: 12px;
+  padding: 0 12px;
+  height: 40px;
   cursor: pointer;
   display: flex;
   align-items: center;
+  background: var(--Surface-Subdued, #FAFBFB);
 
   &:hover {
     background-color: #f6f6f7;
@@ -40,12 +42,13 @@
 .servicesList {
   border-top: 1px solid #e1e3e5;
   padding: 12px;
+  padding-left: 44px;
 }
 
 .labelOptionsContainer {
-  margin-bottom: 16px;
-  border-bottom: 1px solid #e1e3e5;
-  padding-bottom: 16px;
+  padding-bottom: 8px;
+  padding-left: 44px;
+  background: var(--Surface-Subdued, #FAFBFB);
 }
 
 .labelOptionsFooter {
@@ -63,12 +66,20 @@
 
 .labelOptionsList {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   gap: 8px;
 }
 
 .labelOptionItem {
   padding: 4px 0;
+  position: relative;
+}
+
+.optionDivider {
+  height: 1px;
+  background-color: #e1e3e5;
+  width: 100%;
+  margin: 8px 0;
 }
 
 .serviceItem {

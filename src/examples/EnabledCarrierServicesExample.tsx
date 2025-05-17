@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Page, Layout, Frame, Toast } from '@shopify/polaris';
 
-import EnabledCarrierServices, { 
+import EnabledCarrierServices, {
   EnabledCarrierServicesData,
   Carrier,
   LabelDisplayOption
@@ -9,6 +9,11 @@ import EnabledCarrierServices, {
 
 const EnabledCarrierServicesExample: React.FC = () => {
   // 模拟数据
+  let labelDisplayOptionsEmu=[
+    { id: 'shipping-label', name: 'Shipping label', enabled: false },
+    { id: 'qr-code-usa', name: 'QR code', enabled: true, supportedCountries: ['USA'] },
+    { id: 'qr-code-gbr', name: 'QR code', enabled: false, supportedCountries: ['GBR'] },
+  ]
   const [carriers, setCarriers] = useState<Carrier[]>([
     {
       slug: 'ups',
@@ -21,7 +26,12 @@ const EnabledCarrierServicesExample: React.FC = () => {
         { id: 'ups-5', name: 'UPS Globalmail Business', enabled: true },
         { id: 'ups-6', name: 'UPS Medical Express', enabled: false },
         { id: 'ups-7', name: 'UPS Express Easy', enabled: false },
-      ]
+      ],
+	  labelDisplayOptions:[
+		{ id: 'shipping-label', name: 'Shipping label', enabled: false },
+		{ id: 'qr-code-usa', name: 'QR code', enabled: true, supportedCountries: ['USA'] },
+		{ id: 'qr-code-gbr', name: 'QR code', enabled: false, supportedCountries: ['GBR'] },
+	  ]
     },
     {
       slug: 'dhl',
@@ -34,7 +44,12 @@ const EnabledCarrierServicesExample: React.FC = () => {
         { id: 'dhl-5', name: 'DHL Globalmail Business', enabled: true },
         { id: 'dhl-6', name: 'DHL Medical Express', enabled: false },
         { id: 'dhl-7', name: 'DHL Express Easy', enabled: false },
-      ]
+      ],
+	  labelDisplayOptions:[
+		{ id: 'shipping-label', name: 'Shipping label', enabled: false },
+		{ id: 'qr-code-usa', name: 'QR code', enabled: true, supportedCountries: ['USA'] },
+		{ id: 'qr-code-gbr', name: 'QR code', enabled: false, supportedCountries: ['GBR'] },
+	  ]
     },
     {
       slug: 'fedex',
@@ -44,7 +59,12 @@ const EnabledCarrierServicesExample: React.FC = () => {
         { id: 'fedex-2', name: 'FedEx Ground', enabled: true },
         { id: 'fedex-3', name: 'FedEx Home Delivery', enabled: false },
         { id: 'fedex-4', name: 'FedEx SmartPost', enabled: false },
-      ]
+      ],
+	  labelDisplayOptions:[
+		{ id: 'shipping-label', name: 'Shipping label', enabled: false },
+		{ id: 'qr-code-usa', name: 'QR code', enabled: true, supportedCountries: ['USA'] },
+		{ id: 'qr-code-gbr', name: 'QR code', enabled: false, supportedCountries: ['GBR'] },
+	  ]
     },
     {
       slug: 'sf-express',
@@ -53,15 +73,16 @@ const EnabledCarrierServicesExample: React.FC = () => {
         { id: 'sf-1', name: 'S.F Express Standard', enabled: true },
         { id: 'sf-2', name: 'S.F Express Economy', enabled: true },
         { id: 'sf-3', name: 'S.F Express Premium', enabled: false },
-      ]
+      ],
+	  labelDisplayOptions:[
+		{ id: 'shipping-label', name: 'Shipping label', enabled: false },
+		{ id: 'qr-code-usa', name: 'QR code', enabled: true, supportedCountries: ['USA'] },
+		{ id: 'qr-code-gbr', name: 'QR code', enabled: false, supportedCountries: ['GBR'] },
+	  ]
     }
   ]);
 
-  const [labelDisplayOptions, setLabelDisplayOptions] = useState<LabelDisplayOption[]>([
-    { id: 'shipping-label', name: 'Shipping label', enabled: false },
-    { id: 'qr-code-usa', name: 'QR code', enabled: true, supportedCountries: ['USA'] },
-    { id: 'qr-code-gbr', name: 'QR code', enabled: false, supportedCountries: ['GBR'] },
-  ]);
+  const [labelDisplayOptions, setLabelDisplayOptions] = useState<LabelDisplayOption[]>(labelDisplayOptionsEmu);
 
   const [showToast, setShowToast] = useState(false);
   const [selectedRegion, setSelectedRegion] = useState('all');

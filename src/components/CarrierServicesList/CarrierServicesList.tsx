@@ -8,6 +8,7 @@ export interface Carrier {
   slug: string;
   name: string;
   services: CarrierService[];
+  labelDisplayOptions: LabelDisplayOption[];
 }
 
 // 快递服务类型
@@ -27,16 +28,14 @@ export interface LabelDisplayOption {
 
 export interface CarrierServicesListProps {
   carriers: Carrier[];
-  labelDisplayOptions: LabelDisplayOption[];
   onCarrierToggle: (carrierIndex: number) => void;
   onServiceToggle: (carrierIndex: number, serviceIndex: number) => void;
-  onLabelOptionToggle: (optionIndex: number) => void;
+  onLabelOptionToggle: (carrierIndex: number, serviceIndex: number) => void;
   isEditing: boolean;
 }
 
 const CarrierServicesList: React.FC<CarrierServicesListProps> = ({
   carriers,
-  labelDisplayOptions,
   onCarrierToggle,
   onServiceToggle,
   onLabelOptionToggle,
@@ -58,8 +57,10 @@ const CarrierServicesList: React.FC<CarrierServicesListProps> = ({
     const isExpanded = expandedCarriers[carrier.slug];
     const enabledServicesCount = carrier.services.filter(service => service.enabled).length;
 
-    // 只有DHL显示标签选项
-    const carrierLabelOptions = carrier.slug === 'dhl' ? labelDisplayOptions : [];
+    // 在查看模式下，如果没有启用的服务，则不显示该快递公司
+    if (!isEditing && enabledServicesCount === 0) {
+      return null;
+    }
 
     return (
       <CarrierServiceItem
@@ -68,13 +69,13 @@ const CarrierServicesList: React.FC<CarrierServicesListProps> = ({
         name={carrier.name}
         services={carrier.services}
         servicesCount={enabledServicesCount}
-        labelDisplayOptions={carrierLabelOptions}
+        labelDisplayOptions={carrier.labelDisplayOptions}
         isExpanded={isExpanded}
         isEditing={isEditing}
         onToggle={() => toggleCarrierExpand(carrier.slug)}
         onCarrierToggle={() => onCarrierToggle(carrierIndex)}
         onServiceToggle={(serviceIndex) => onServiceToggle(carrierIndex, serviceIndex)}
-        onLabelOptionToggle={onLabelOptionToggle}
+        onLabelOptionToggle={(serviceIndex) => onLabelOptionToggle(carrierIndex, serviceIndex)}
       />
     );
   };

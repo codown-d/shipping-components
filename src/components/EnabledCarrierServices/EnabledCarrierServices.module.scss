@@ -9,20 +9,15 @@
   font-size: 16px;
 }
 
-.editButtons {
-  display: flex;
-  gap: 8px;
+.selectCarrierText {
+  font-size: 14px;
 }
 
 .regionSelector {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  margin-bottom: 16px;
-}
-
-.regionLabel {
-  font-weight: 500;
+  width: 148px;
 }
 
 .regionSelect {
@@ -40,68 +35,66 @@
   gap: 8px;
 }
 
-.labelOptionsHeader {
+/* 查看模式下的样式 */
+.carrierRow {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 100%;
-  padding: 6px;
-  border-radius: 4px;
-background: var(--Background-Default, #F6F6F7);
-
 }
 
-.labelOptionsSection {
-  margin-top: 24px;
-  padding-top: 16px;
-  border-top: 1px solid #e1e3e5;
+.carrierInfo {
+  display: flex;
+  align-items: center;
+}
+
+.carrierIcon {
+  margin-right: 16px;
+}
+
+.carrierDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.carrierName {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.servicesCount {
+  color: #637381;
+  font-size: 12px;
+}
+
+.labelOptionsView {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-radius: 4px;
+	height: 40px;
+	padding: 0 8px;
+background: var(--Background-Default, #F6F6F7);
+}
+
+.labelOptionsTitle {
+  font-size: 14px;
+  color: #6D7175;
+}
+
+.labelOptionsList {
+  display: flex;
+  gap: 8px;
 }
 
 .labelOptionItem {
   display: flex;
   align-items: center;
-  margin-left: 16px;
 }
 
-.optionDivider {
-  height: 1px;
-  background-color: #e1e3e5;
-  width: 100%;
-}
-
-.labelOptionsContainer {
-  /* 这个类将应用于包含Card.Section的div */
+.noBorderSection {
+	margin-top: 12px;
+  /* 使用:global语法来覆盖Polaris组件的样式 */
   :global(.Polaris-Card__Section) {
-    border-top: 1px solid transparent;
+    border-top: 0;
     padding-top: 0;
   }
-}
-
-.cardFooter {
-  display: flex;
-  justify-content: flex-end;
-  padding: 16px;
-  border-top: 1px solid #e1e3e5;
-}
-
-.footerButtons {
-  display: flex;
-  gap: 8px;
-}
-
-.regionSelector {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  justify-content: space-between;
-}
-
-.regionLabel {
-  min-width: 100px;
-  font-weight: 500;
-  flex: 1;
-}
-
-.regionSelect {
-  width: 126px;
 }
