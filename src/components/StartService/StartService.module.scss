@@ -1,0 +1,48 @@
+.title {
+	margin-left: 6px;
+	color: var(--Color-text-primary, #111);
+	text-align: center;
+
+	/* Heading/xs */
+	font-family: var(--family-default, Poppins);
+	font-size: var(--Size-xl, 24px);
+	font-style: normal;
+	font-weight: var(--Weight-semibold, 600);
+	line-height: var(--Line-height-xl, 32px);
+	/* 133.333% */
+}
+
+.desc {
+	color: var(--Text-Subdued, #6D7175);
+	text-align: center;
+	font-family: var(--Caption-1-Font, "DM Sans");
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: var(--Caption-1-Line-Height, 20px);
+	/* 142.857% */
+	letter-spacing: var(--Caption-1-Letter-Spacing, 0.1px);
+}
+
+.divider-layout {
+	display: flex;
+	padding: 20px 0;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 24px;
+	align-self: stretch;
+}
+
+.title2 {
+	color: var(--Text-Default, #202223);
+	font-feature-settings: 'liga' off, 'clig' off;
+
+	/* Desktop/Button */
+	font-family: "SF Pro Text";
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 20px;
+	margin-bottom: 10px;
+	/* 142.857% */
+}

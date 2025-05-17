@@ -1,0 +1,149 @@
+// 卡片容器样式
+.card_container {
+  height: 100%;
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+
+  &.popular {
+    cursor: default;
+  }
+}
+
+// 卡片内容容器
+.card_content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  border: 1px solid #C9CCCF;
+  overflow: hidden;
+  background: #FFFFFF;
+  padding: 16px;
+  position: relative;
+}
+
+// Popular卡片的特殊背景
+.popular .card_content {
+  background: linear-gradient(135deg, #FCFEFF 0%, #FFFDF4 45.81%, #F3D4D3 100%);
+}
+
+// 卡片头部区域
+.card_header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+// 标题区域
+.title_container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+// 标题行
+.title_row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// 标题文本
+.title {
+  font-family: 'SF Pro Text', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.43;
+  color: #202223;
+  margin-bottom: 4px;
+}
+
+// Popular标签
+.popular_badge {
+  margin-left: 8px;
+  height: 20px;
+}
+
+// carriers区域
+.carriers_container {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+// carriers图标组
+.carriers_icons {
+  display: flex;
+  align-items: center;
+}
+
+// carrier图标
+.carrier_icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1.25px solid #FFFFFF;
+  margin-right: -4px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+// 更多carriers指示器
+.more_carriers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-color: #f4f6f8;
+  border-radius: 50%;
+  font-size: 12px;
+  color: #6D7175;
+  margin-left: 4px;
+}
+
+// carriers数量文本
+.carriers_count {
+  font-family: 'SF Pro Text', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #6D7175;
+  margin-left: 8px;
+}
+
+// 分隔符
+.separator {
+  color: #8c9196;
+  margin: 0 8px;
+}
+
+// 描述文本
+.description {
+  font-family: 'SF Pro Text', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #6D7175;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+// 弹性空间
+.spacer {
+  flex: 1 0 auto;
+  min-height: 20px;
+}
+
+// 添加按钮
+.add_button {
+  margin-top: 16px;
+  width: 84px;
+  height: 32px;
+}

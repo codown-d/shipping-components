@@ -1,0 +1,65 @@
+{
+    "name": "@aftership/shipping-components",
+    "version": "0.3.7",
+    "main": "dist/index.js.mjs",
+    "types": "dist/index.d.ts",
+    "license": "MIT",
+    "devDependencies": {
+        "@testing-library/jest-dom": "^5.16.5",
+        "@testing-library/react": "^13.4.0",
+        "@testing-library/user-event": "^13.5.0",
+        "@types/jest": "^27.5.2",
+        "@types/node": "^16.18.12",
+        "@types/react": "16.9.43",
+        "@types/react-dom": "16.9.5",
+        "@vitejs/plugin-react": "3.1.0",
+        "rollup-plugin-copy": "3.4.0",
+        "sass": "1.58.1",
+        "typescript": "^4.9.5",
+        "vite": "^4.0.3",
+        "vite-plugin-dts": "2.0.0-beta.1",
+        "vite-plugin-html": "3.2.0",
+        "vite-plugin-libcss": "1.0.5"
+    },
+    "scripts": {
+        "example": "vite -c vite.config.example.ts",
+        "example:build": "vite build -c vite.config.example.ts",
+        "build": "vite build",
+        "build:watch": "vite build --watch",
+        "prepublishOnly": "yarn build"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not ie <= 11",
+            "not op_mini all"
+        ]
+    },
+    "dependencies": {
+        "@aftership/automizely-product-auth": "2.0.3",
+        "@aftership/meerkat-sdk": "^2.0.11",
+        "@hookform/resolvers": "1.0.0",
+        "@sentry/react": "^9.18.0",
+        "@shopify/polaris": "7.0.0-rc.2",
+        "@shopify/react-i18n": "^7.14.0",
+        "classnames": "^2.5.1",
+        "clsx": "^2.1.1",
+        "currency-codes": "^2.2.0",
+        "dayjs": "^1.11.13",
+        "i18n-iso-countries": "^7.14.0",
+        "i18next": "23.7.16",
+        "phone": "^3.1.59",
+        "pluralize": "^8.0.0",
+        "query-string": "^9.1.2",
+        "react": "17.0.2",
+        "react-dom": "17.0.2",
+        "react-hook-form": "^7.56.3",
+        "react-i18next": "^11.18.6",
+        "react-router-dom": "5.3.4",
+        "react-table": "^7.8.0",
+        "react-use": "^17.6.0",
+        "uuid": "^11.1.0",
+        "yup": "^1.6.1"
+    }
+}

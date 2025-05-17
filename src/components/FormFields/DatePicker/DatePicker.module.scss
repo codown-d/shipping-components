@@ -1,0 +1,10 @@
+.input {
+    :global {
+        .Polaris-TextField {
+            cursor: pointer;
+            input {
+                cursor: pointer;
+            }
+        }
+    }
+}

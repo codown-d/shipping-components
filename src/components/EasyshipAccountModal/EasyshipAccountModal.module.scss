@@ -1,0 +1,52 @@
+.container {
+  width: 100%;
+}
+
+.content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.divider {
+  height: 1px;
+  background-color: #E1E3E5;
+  width: 100%;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-top: 1px solid #E4E5E7;
+}
+
+.poweredBy {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #6D7175;
+  font-size: 14px;
+}
+
+.logo {
+  height: 20px;
+}
+
+.termsText {
+  font-size: 13px;
+  color: #637381;
+  line-height: 1.2;
+  margin-top: 8px;
+}
+
+.termsLink {
+  color: #2C6ECB;
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}

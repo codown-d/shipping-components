@@ -1,0 +1,11 @@
+.wrapper {
+    :global(.Polaris-Labelled__Error) {
+        position: relative;
+        margin-bottom: 22px;
+
+        :global(.Polaris-InlineError) {
+            position: absolute;
+            width: 500px;
+        }
+    }
+}

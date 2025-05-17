@@ -1,0 +1,84 @@
+// 变量定义
+$spacing-small: 8px;
+$spacing-medium: 16px;
+$spacing-large: 40px;
+$subdued-text-color: var(--p-text-subdued);
+
+// 搜索区域样式
+.search_container {
+  margin-top: $spacing-medium;
+  margin-bottom: $spacing-medium;
+}
+
+.region_selector {
+  width: 150px;
+  position: relative;
+}
+
+.tooltip_content {
+  padding: 4px $spacing-small;
+}
+
+// 加载状态样式
+.loading_container {
+  text-align: center;
+  padding: $spacing-large 0;
+}
+
+.loading_text {
+  margin-top: $spacing-medium;
+  color: $subdued-text-color;
+}
+
+// 空状态样式
+.empty_state {
+  text-align: center;
+  padding: $spacing-large 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty_state_icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+}
+
+.empty_state_title {
+  font-size: 20px;
+  line-height: 1.4em;
+  font-weight: 400;
+  color: #202223;
+  margin-bottom: 4px;
+}
+
+// 标签页内容样式
+.tab_content {
+  padding: $spacing-medium 0;
+}
+
+// 按钮样式
+.action_button {
+  margin-top: $spacing-medium;
+}
+
+// 承运商账户容器样式
+.carrier_account_container {
+  margin-top: $spacing-medium;
+}
+
+.header_actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: $spacing-medium;
+}
+
+// 过滤消息样式
+.filtered_message {
+  margin-top: $spacing-small;
+  margin-bottom: $spacing-medium;
+  text-align: center;
+  color: $subdued-text-color;
+}

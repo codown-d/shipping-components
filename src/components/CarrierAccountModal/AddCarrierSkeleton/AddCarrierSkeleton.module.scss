@@ -1,0 +1,13 @@
+.card {
+    width: 30rem;
+
+    :global {
+        .Polaris-Card {
+            overflow: hidden;
+        }
+
+        .Polaris-ResourceItem__ListItem {
+            list-style: none;
+        }
+    }
+}

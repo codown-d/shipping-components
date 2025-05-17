@@ -1,0 +1,14 @@
+.table-wrapper {
+    padding: 1rem 0;
+    overflow-x: auto;
+
+    .badge {
+        width: 6.8rem;
+        height: 2.8rem;
+        color: var(--p-action-primary);
+        border: 0.1rem solid var(--p-action-primary);
+        border-radius: 0.3rem;
+        line-height: 2.6rem;
+        text-align: center;
+    }
+}

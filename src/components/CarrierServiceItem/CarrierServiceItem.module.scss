@@ -1,0 +1,76 @@
+.carrierItem {
+  border: 1px solid #e1e3e5;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.carrierHeader {
+  padding: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    background-color: #f6f6f7;
+  }
+}
+
+.carrierCheckbox {
+  margin-right: 12px;
+}
+
+.carrierIcon {
+  margin-right: 12px;
+}
+
+.carrierName {
+  flex: 1;
+}
+
+.servicesCount {
+  display: flex;
+  align-items: center;
+  color: #637381;
+}
+
+.expandIcon {
+  margin-left: 8px;
+}
+
+.servicesList {
+  border-top: 1px solid #e1e3e5;
+  padding: 12px;
+}
+
+.labelOptionsContainer {
+  margin-bottom: 16px;
+  border-bottom: 1px solid #e1e3e5;
+  padding-bottom: 16px;
+}
+
+.labelOptionsFooter {
+  margin-top: 8px;
+  padding: 12px;
+  border-top: 1px solid #e1e3e5;
+}
+
+.labelOptionsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.labelOptionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.labelOptionItem {
+  padding: 4px 0;
+}
+
+.serviceItem {
+  padding: 8px 0;
+}

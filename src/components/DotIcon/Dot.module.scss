@@ -1,0 +1,6 @@
+.dot {
+    :global(.Polaris-Indicator--pulseIndicator:before) {
+        z-index: 1;
+        animation: Polaris-Indicator--bounce 5s ease infinite;
+    }
+}

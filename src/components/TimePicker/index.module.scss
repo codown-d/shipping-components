@@ -1,0 +1,8 @@
+.time_picker_style {
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: nowrap;
+	:global(.Polaris-Scrollable:focus) {
+		outline: none;
+	}
+}

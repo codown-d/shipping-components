@@ -1,0 +1,15 @@
+.straightMode {
+    :global(.Polaris-ChoiceList__Choices) {
+        display: flex;
+
+        li + li {
+            margin-left: 4rem;
+        }
+    }
+}
+
+.banner {
+    :global(.Polaris-Banner) {
+        margin-bottom: 1.6rem;
+    }
+}

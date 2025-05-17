@@ -1,0 +1,25 @@
+.agreement {
+    display: flex;
+    label {
+        margin-right: 0.9rem;
+    }
+}
+
+.fedexLink {
+    color: #2c61cb;
+    cursor: pointer;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.credentials {
+    margin-top: -1.6rem;
+    :global(.Polaris-Labelled__LabelWrapper) {
+        margin-top: 1.6rem;
+    }
+}
+
+.name {
+    width: 28rem;
+}

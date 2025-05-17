@@ -1,0 +1,85 @@
+.carrierServicesList {
+  width: 100%;
+}
+
+.carrierItem {
+  border: 1px solid #e1e3e5;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.carrierHeader {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  cursor: pointer;
+  background-color: #ffffff;
+
+  &:hover {
+    background-color: #f6f6f7;
+  }
+}
+
+.carrierCheckbox {
+  margin-right: 12px;
+}
+
+.carrierIcon {
+  margin-right: 12px;
+}
+
+.carrierInfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.servicesCount {
+  display: flex;
+  align-items: center;
+  color: #637381;
+  font-size: 14px;
+  margin-left: 8px;
+}
+
+.servicesList {
+  padding: 0 16px 16px 16px;
+  border-top: 1px solid #e1e3e5;
+  background-color: #ffffff;
+}
+
+.serviceItem {
+  padding: 8px 0;
+}
+
+.labelOptionsContainer {
+  margin-bottom: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid #e1e3e5;
+}
+
+.labelOptionsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 0 8px 0;
+  color: #6D7175;
+}
+
+.labelOptionsList {
+  display: flex;
+  flex-direction: column;
+}
+
+.labelOptionItem {
+  padding: 8px 0;
+  border-bottom: 1px solid #e1e3e5;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}

@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.editButtons {
+  display: flex;
+  gap: 8px;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px;
+  border-top: 1px solid #e1e3e5;
+}
+
+.footerButtons {
+  display: flex;
+  gap: 8px;
+}

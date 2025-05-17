@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.field {
+  flex: 1;
+}
+
+.termsContainer {
+  margin-top: 8px;
+}
