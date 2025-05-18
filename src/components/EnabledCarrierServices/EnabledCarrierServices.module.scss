@@ -72,7 +72,7 @@
 	border-radius: 4px;
 	height: 40px;
 	padding: 0 8px;
-background: var(--Background-Default, #F6F6F7);
+  background: var(--Background-Default, #F6F6F7);
 }
 
 .labelOptionsTitle {
@@ -97,4 +97,10 @@ background: var(--Background-Default, #F6F6F7);
     border-top: 0;
     padding-top: 0;
   }
+}
+
+.carrierSelectorRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
 }

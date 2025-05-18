@@ -163,8 +163,7 @@ const AccountInformation: React.FC<AccountInformationProps> = ({
 
 						<Stack distribution="fillEvenly">
 							<TextField
-								label={<>Company Name<span style={{color:'#8C9196',marginLeft:'4px'}}>(optional)</span></>}
-
+								label={<>Company Name<span className={styles.optionalLabel}>(optional)</span></>}
 								value={companyName}
 								onChange={setCompanyName}
 								autoComplete="organization"
@@ -190,7 +189,7 @@ const AccountInformation: React.FC<AccountInformationProps> = ({
 		);
 	};
 
-	return <Card>{isEditing ? renderEditMode() : renderViewMode()}</Card>;
+	return <div style={{ background: "#FFFFFF" }}><Card >{isEditing ? renderEditMode() : renderViewMode()}</Card></div>;
 };
 
 export default AccountInformation;

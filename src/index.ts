@@ -39,6 +39,12 @@ export {useGetShippingPartners} from './queries/shippingPartners';
 export {default as AccountInformation} from './components/AccountInformation';
 export type {AccountInformationData} from './components/AccountInformation';
 
+export {default as AccountSheet} from './components/AccountSheet';
+export type {AccountSheetProps} from './components/AccountSheet';
+
+export {default as Drawer} from './components/Drawer';
+export type {DrawerProps} from './components/Drawer';
+
 export {default as EnabledCarrierServices} from './components/EnabledCarrierServices';
 export type {
   EnabledCarrierServicesData,
@@ -46,5 +52,8 @@ export type {
   CarrierService,
   LabelDisplayOption
 } from './components/EnabledCarrierServices';
+
+export {default as PaymentInformation} from './components/PaymentInformation';
+export type {PaymentInformationData} from './components/PaymentInformation';
 
 init();

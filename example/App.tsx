@@ -10,8 +10,12 @@ import CarrierManagerProvider from './CarrierManagerProvider';
 import TrackingNumber from '@/container/TrackingNumber/TrackingNumber';
 import AccountInformationExample from '@/examples/AccountInformationExample';
 import EnabledCarrierServicesExample from '@/examples/EnabledCarrierServicesExample';
+import AccountSheetExample from '@/examples/AccountSheetExample';
 
 import {createBrowserHistory} from 'history';
+import PaymentInformation from '@/components/PaymentInformation';
+import PaymentInformationExample from '@/examples/PaymentInformationExample';
+import BillingCycleExample from '@/examples/BillingCycleExample';
 
 const history = createBrowserHistory();
 
@@ -51,6 +55,15 @@ const App = () => {
                         </Route>
                         <Route path="/carrier-services">
                             <EnabledCarrierServicesExample />
+                        </Route>
+						<Route path="/payment-information">
+                            <PaymentInformationExample />
+                        </Route>
+						<Route path="/billing-cycle">
+                            <BillingCycleExample />
+                        </Route>
+                        <Route path="/account-sheet">
+                            <AccountSheetExample />
                         </Route>
                     </Switch>
                 </Router>

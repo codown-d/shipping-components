@@ -4,7 +4,8 @@ import {
 	Button,
 	Select,
 	Checkbox,
-	TextStyle,
+	// 移除未使用的导入
+	// TextStyle,
 } from '@shopify/polaris';
 
 import CarrierServicesList from '../CarrierServicesList';
@@ -62,7 +63,8 @@ const EnabledCarrierServices: React.FC<EnabledCarrierServicesProps> = ({
 	const [labelDisplayOptions, setLabelDisplayOptions] = useState<LabelDisplayOption[]>(
 		initialLabelDisplayOptions
 	);
-	const [expandedCarriers, setExpandedCarriers] = useState<Record<string, boolean>>({});
+	// 移除未使用的状态
+	// const [expandedCarriers, setExpandedCarriers] = useState<Record<string, boolean>>({});
 
 	// 处理编辑按钮点击
 	const handleEditClick = () => {
@@ -121,26 +123,28 @@ const EnabledCarrierServices: React.FC<EnabledCarrierServicesProps> = ({
 		setCarriers(newCarriers);
 	};
 
+	// 移除未使用的函数和变量
 	// 处理快递公司展开/折叠
-	const toggleCarrierExpand = (slug: string) => {
-		setExpandedCarriers(prev => ({
-			...prev,
-			[slug]: !prev[slug],
-		}));
-	};
+	// const toggleCarrierExpand = (slug: string) => {
+	// 	setExpandedCarriers(prev => ({
+	// 		...prev,
+	// 		[slug]: !prev[slug],
+	// 	}));
+	// };
 
 	// 计算已启用的快递公司数量
-	const enabledCarriersCount = carriers.filter(carrier =>
-		carrier.services.some(service => service.enabled)
-	).length;
+	// const enabledCarriersCount = carriers.filter(carrier =>
+	// 	carrier.services.some(service => service.enabled)
+	// ).length;
 
 	// 展示状态下的内容
 	const renderViewMode = () => {
 		// 获取已启用的快递公司
 		const enabledCarriers = carriers.filter(carrier => carrier.services.some(service => service.enabled));
 
+		// 移除未使用的变量
 		// 获取已启用的标签选项
-		const enabledLabelOptions = carriers.filter(carrier => carrier.labelDisplayOptions.some(labelDisplayOption => labelDisplayOption.enabled));
+		// const enabledLabelOptions = carriers.filter(carrier => carrier.labelDisplayOptions.some(labelDisplayOption => labelDisplayOption.enabled));
 
 		return (
 			<>
@@ -211,7 +215,7 @@ const EnabledCarrierServices: React.FC<EnabledCarrierServicesProps> = ({
 				</Card.Section>
 
 				<Card.Section>
-					<div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
+					<div className={styles.carrierSelectorRow}>
 						<div className={styles.selectCarrierText}>Select a carrier and service</div>
 						{regionOptions && onRegionChange && (
 							<div className={styles.regionSelector}>
@@ -249,7 +253,7 @@ const EnabledCarrierServices: React.FC<EnabledCarrierServicesProps> = ({
 		);
 	};
 
-	return <Card>{isEditing ? renderEditMode() : renderViewMode()}</Card>;
+	return <div style={{ background: "#FFFFFF" }}><Card>{isEditing ? renderEditMode() : renderViewMode()}</Card></div>;
 };
 
 export default EnabledCarrierServices;

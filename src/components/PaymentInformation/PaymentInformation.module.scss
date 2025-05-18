@@ -1,0 +1,145 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.editButtons {
+  display: flex;
+  gap: 8px;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footerButtons {
+  display: flex;
+  gap: 8px;
+}
+
+.balanceRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.balanceAmount {
+  font-weight: 600;
+  color: #212b36;
+}
+
+.paymentMethodRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.autoRechargeRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.autoRechargeSettings {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.autoRechargeDescription {
+  margin-top: 8px;
+  color: #637381;
+  font-size: 14px;
+}
+
+.cardIcon {
+  margin-right: 8px;
+}
+
+.inputRow {
+  display: flex;
+  align-items: center;
+}
+
+.currencySymbol {
+  margin-right: 4px;
+}
+
+.divider {
+  height: 1px;
+  background-color: #e1e3e5;
+  margin: 16px 0;
+}
+
+.poweredByStripe {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+  color: #637381;
+  font-size: 14px;
+}
+
+.balanceColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.balanceValue {
+  color: #7F5600;
+}
+
+.formContainer {
+  margin-top: 16px;
+  padding: 0 2px;
+  overflow: hidden;
+}
+
+.stripeBold {
+  font-weight: bold;
+  margin-left: 4px;
+}
+
+.noPadding {
+  padding: 0;
+}
+.margin16 {
+	margin: 16px 0;
+  }
+
+.sectionTitle {
+  color: #232933;
+  margin-bottom: 10px;
+}
+
+.paymentMethodCard {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  background: #F6F6F7;
+}
+
+.autoRechargeCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  background: #F6F6F7;
+}
+
+.autoRechargeInfo {
+  display: flex;
+  justify-content: space-between;
+  flex: 2;
+  padding-right: 35%;
+}

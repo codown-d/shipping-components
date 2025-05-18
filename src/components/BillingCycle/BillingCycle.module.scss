@@ -1,0 +1,203 @@
+.header {
+  padding: 16px 20px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.description {
+  font-size: 14px;
+  color: #637381;
+  margin: 0;
+}
+
+.filters {
+  display: flex;
+  padding: 0 20px 16px;
+  gap: 16px;
+}
+
+.typeFilter {
+  width: 180px;
+}
+
+.dateFilter {
+  flex: 1;
+}
+
+.datePrefix {
+  margin-right: 8px;
+}
+
+.typeSelectWrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.typePrefix {
+  margin-right: 8px;
+  white-space: nowrap;
+}
+
+.fullWidthSelect {
+  width: 100%;
+
+  :global(.Polaris-Select) {
+    width: 100%;
+  }
+}
+
+.customSelect {
+  position: relative;
+  width: 100%;
+  border: 1px solid #C4CDD5;
+  border-radius: 4px;
+  padding: 8px 14px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  cursor: pointer;
+  height: 36px;
+  box-sizing: border-box;
+
+  &:hover {
+    border-color: #B3B9C0;
+  }
+}
+
+.customSelectLabel {
+  font-size: 14px;
+  color: #212B36;
+  margin-right: 5px;
+}
+
+.customSelectValue {
+  flex-grow: 1;
+  font-size: 14px;
+  color: #212B36;
+}
+
+.customSelectIcon {
+  margin-left: 8px;
+  font-size: 12px;
+  color: #637381;
+}
+
+.inlinePrefix {
+  font-weight: normal;
+  color: #212B36;
+  margin-right: 5px;
+}
+
+.dateFieldWrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.dateInlinePrefix {
+  color: #637381;
+  margin:0 8px;
+}
+
+.customDatePicker,
+.customTypeSelect {
+  display: flex;
+  align-items: center;
+  padding: 8px 14px;
+  border: 1px solid #C4CDD5;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: white;
+  width: 100%;
+  text-align: left;
+  font-size: 14px;
+
+  &:hover {
+    border-color: #B3B9C0;
+  }
+}
+
+.dateValue,
+.typeSelectValue {
+  margin-left: 8px;
+  color: #212B36;
+  flex-grow: 1;
+}
+
+.datePickerPopover,
+.typeSelectPopover {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  margin-top: 5px;
+  background-color: white;
+  border: 1px solid #C4CDD5;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  width: 100%;
+}
+
+.typeSelectOptions {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.typeSelectOption {
+  padding: 8px 14px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #F4F6F8;
+  }
+}
+
+.typeSelectOptionSelected {
+  background-color: #F9FAFB;
+  font-weight: 500;
+}
+
+.typeSelectLabel {
+  color: #212B36;
+  margin-right: 5px;
+}
+
+.typeSelectIcon {
+  margin-left: 8px;
+  font-size: 12px;
+  color: #637381;
+}
+
+.tableContainer {
+  overflow-x: auto;
+}
+
+.typeCell {
+  display: flex;
+  align-items: center;
+}
+
+.typeTag {
+  background-color: #f4f6f8;
+  border-radius: 24px;
+  padding: 0px 8px;
+  height: 24px;
+  line-height: 22px;
+  display: inline-flex;
+  font-size: 12px;
+  color: #454f5b;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+  border-top: 1px solid #e1e3e5;
+}

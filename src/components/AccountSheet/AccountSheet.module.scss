@@ -1,0 +1,187 @@
+.customTabs {
+  border-bottom: 1px solid #e1e3e5;
+  display: flex;
+  height: 48px;
+  align-items: center;
+  background: #F6F6F7;
+}
+
+.tabItem {
+  line-height: 48px;
+  margin-right: 12px;
+  width: 120px;
+  text-align: center;
+}
+
+.tabItemactive {
+  border-bottom: 2px solid #5c6ac4;
+}
+
+.drawerContent {
+  margin-top: 16px;
+  padding: 0 4px;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.sectionTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #212b36;
+  margin: 0;
+}
+
+.subsectionTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #212b36;
+  margin: 0;
+}
+
+.accountDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.accountDetail {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #637381;
+}
+
+.carriersList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.carrierItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.carrierInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.carrierLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #f4f6f8;
+  border-radius: 4px;
+  font-size: 24px;
+}
+
+.carrierDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.carrierName {
+  font-weight: 500;
+  color: #212b36;
+}
+
+.carrierServices {
+  font-size: 12px;
+  color: #637381;
+}
+
+.displayOptions {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #e1e3e5;
+}
+
+.displayOptionsTitle {
+  font-size: 14px;
+  color: #212b36;
+  margin-bottom: 12px;
+}
+
+.optionsCheckboxes {
+  display: flex;
+  gap: 20px;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: #637381;
+}
+
+.paymentDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.balanceSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e1e3e5;
+}
+
+.balanceLabel {
+  font-size: 14px;
+  color: #637381;
+  margin-bottom: 4px;
+}
+
+.balanceAmount {
+  font-size: 16px;
+  font-weight: 600;
+  color: #212b36;
+}
+
+.paymentMethodSection,
+.rechargeSection {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e1e3e5;
+}
+
+.paymentMethod {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+  color: #637381;
+}
+
+.rechargeDetails {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.rechargeLabel {
+  font-size: 14px;
+  color: #637381;
+  margin-bottom: 4px;
+}
+
+.informationTab,
+.billingTab {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
